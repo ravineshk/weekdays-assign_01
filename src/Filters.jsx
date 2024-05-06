@@ -113,8 +113,8 @@ function Filters({
           onChange={handleRoleChange}
           sx={{ minWidth: 150 }}
         />
-        <FormControl sx={{ minWidth: 120, marginRight: '10px' }}>
-          <InputLabel id="min-exp-filter-label">Min base Pay</InputLabel>
+        <FormControl sx={{ minWidth: 150, marginLeft: '10px' }}>
+          <InputLabel id="min-exp-filter-label">Min Pay</InputLabel>
           <Select
             labelId="min-pay-filter-label"
             id="min-pay-filter"

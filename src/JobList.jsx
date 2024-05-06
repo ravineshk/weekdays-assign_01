@@ -42,7 +42,7 @@ function JobList({ minExp, companyName, location, remote, techStack, jobRole, mi
     fetchJobData();
   }, [limit, offset]);
 
-  const handleScroll = () => {
+  /*const handleScroll = () => {
     if (
       window.innerHeight + document.documentElement.scrollTop ===
       document.documentElement.offsetHeight
@@ -61,6 +61,21 @@ function JobList({ minExp, companyName, location, remote, techStack, jobRole, mi
       window.removeEventListener('scroll', handleScroll);
     };
   }, [jobs, totalCount]);
+
+    // Infinite Scroll
+    const handleScroll = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop ===
+        document.documentElement.offsetHeight && jobs.length < totalCount
+      ) {
+        setLimit((prevLimit) => prevLimit + 10); 
+      }
+    };
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, [jobs, totalCount]);*/
 
 
   // useEffect(() => {
@@ -145,9 +160,10 @@ function JobList({ minExp, companyName, location, remote, techStack, jobRole, mi
     filterJobs();
   }, [jobs, location, remote, minExp, companyName, techStack, minPay]);
 
-  const handleLoadMore = () => {
+  /*const handleLoadMore = () => {
     setOffset(offset + limit); 
-  };
+  };*/
+  
 
   return (
     <div>
