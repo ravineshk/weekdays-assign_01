@@ -1,3 +1,7 @@
+# Access the deployed react app on this link
+
+https://sprightly-truffle-7b4873.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
